@@ -1,23 +1,84 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a background color and center the text */
 body {
   text-align: center;
   background-color: #283149;
+  color: #DBEDF3;
+  font-family: 'Arvo', cursive;
+  font-weight: 900;
+  line-height: 2;
+  font-size: 5rem;
+  text-shadow: 3px 0 #DA0463;
 }
 
+/* Style the title */
 h1 {
   font-size: 5rem;
   color: #DBEDF3;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #DA0463;
-
+  margin-top: 20px;
 }
 
+/* Style the drum buttons */
+.set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.drum {
+  font-size: 2rem;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 10px solid #404B69;
+  border-radius: 15px;
+  background-color: #fff;
+  color: #DA0463;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 180px; /* Increased button width */
+  height: 180px; /* Increased button height */
+}
+
+.drum:hover {
+  background-color: #DA0463;
+  color: #fff;
+}
+
+/* Adjust the footer */
 footer {
+  margin-top: 30px;
+  font-size: 0.8rem;
   color: #DBEDF3;
   font-family: sans-serif;
 }
 
+/* Make it responsive */
+@media (max-width: 768px) {
+  .set {
+    flex-direction: column;
+  }
+
+  .drum {
+    width: 80%;
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Additional responsive adjustments as needed */
+
+/* Add your background images to the drum buttons */
 .w {
- background-image: url("images/tom1.png");
+  background-image: url("images/tom1.png");
 }
 
 .a {
@@ -42,40 +103,4 @@ footer {
 
 .l {
   background-image: url("images/snare.png");
-}
-
-.set {
-  margin: 10% auto;
-}
-
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
-
-.pressed {
-  box-shadow: 0 3px 4px 0 #DBEDF3;
-  opacity: 0.5;
-}
-
-.red {
-  color: red;
-}
-
-.drum {
-  outline: none;
-  border: 10px solid #404B69;
-  font-size: 5rem;
-  font-family: 'Arvo', cursive;
-  line-height: 2;
-  font-weight: 900;
-  color: #DA0463;
-  text-shadow: 3px 0 #DBEDF3;
-  border-radius: 15px;
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  margin: 10px;
-  background-color: white;
 }
